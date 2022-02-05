@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&family=Roboto:wght@100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 13px;
+}
+
+.template {
+  position: relative;
+  width: 100%;
+  /* height: 120vh; */
+  padding: 9em 0;
+  top: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 81%, 0.3);
+  display: grid;
+  place-items: center;
+}
+
+.card-template {
+  position: relative;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr 0.9fr 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 0.6em;
+}
+
+.card-template .card {
+  /* width: 100%; */
+  overflow: hidden;
+  position: relative;
+  /* height: 100%; */
+  border-radius: 0.5em;
+  overflow: auto;
+  padding: 1.3em 2em;
+  box-shadow: 1em 1em 2em -9px rgba(0, 0, 0, 0.2);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.card-template .card::-webkit-scrollbar {
+  width: 0;
+}
+.card1 {
+  background: hsl(263, 55%, 52%);
+  grid-column: 1 / 3;
+}
+
+.card2 {
+  background: hsl(217, 19%, 35%);
+}
+
+.card3 {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+  background: hsl(0, 0%, 100%);
+}
+.card5 {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  background: hsl(219, 29%, 14%);
+}
+
+/* 
+
+    code for header card 
+
+*/
+
+.header-card {
+  padding: 0.5em 0;
+  display: flex;
+  z-index: 2;
+  position: relative;
+  align-items: center;
+}
+.header-card img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.header-card .profile-header {
+  padding-left: 1em;
+
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: capitalize;
+}
+
+.header-card .profile-header h4 {
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.header-card .profile-header span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9em;
+}
+.name-white {
+  color: #000;
+}
+.header-card .profile-header .span-white,
+.body-card .span-white {
+  color: hsl(217, 19%, 35%);
+}
+
+.body-card h4.desc-card-dark {
+  color: hsl(219, 29%, 14%);
+}
+/* 
+
+    end code for header card 
+
+*/
+
+/* 
+
+    code for body card
+
+*/
+
+.body-card {
+  position: relative;
+  z-index: 2;
+  padding: 0.5em 0;
+}
+
+.body-card .desc-card {
+  color: hsla(0, 0%, 100%, 0.9);
+  font-size: 1.5em;
+  letter-spacing: 0.1px;
+  margin-bottom: 0.9em;
+}
+
+.body-card p {
+  margin-top: 0.5em;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-weight: 300;
+}
+
+.img-kutip {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 
+
+    end code for body card
+
+*/
+
+/* 
+
+media < 1400px
+
+*/
+
+@media screen and (max-width: 1200px) {
+  .body-card .desc-card {
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 1.3em;
+    letter-spacing: 0.1px;
+    margin-bottom: 0.9em;
+  }
+}
+
+/* 
+
+end media < 1400px
+
+*/
+
+/* 
+
+media < 1000px
+
+*/
+
+@media screen and (max-width: 1000px) {
+  .template {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1em 0;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 81%, 0.3);
+    display: grid;
+    place-items: center;
+  }
+  .card-template {
+    max-width: 600px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+  }
+  .card1 {
+    grid-column: 1 / 2;
+
+    grid-row: 1 / 2;
+  }
+
+  .card2 {
+    background: hsl(217, 19%, 35%);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .card3 {
+    grid-column: 1/ 2;
+    grid-row: 5 / 6;
+    background: hsl(0, 0%, 100%);
+  }
+  .card4 {
+    grid-row: 3 / 4;
+  }
+  .card5 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    background: hsl(219, 29%, 14%);
+  }
+}
+
+/* 
+
+end media < 1000px
+
+*/
+
+@media screen and (min-width: 1500px) {
+  .card-template {
+    max-width: 1000px;
+  }
+}
